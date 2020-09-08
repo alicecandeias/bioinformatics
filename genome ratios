@@ -1,0 +1,24 @@
+#just type wherever DNA you want on a set of these four lettes {A, G, C, T}
+dna = "GCATGCTAGCTAGCTAGTCGATCGTAGCTAGCTAGCTGATCGATCGTAGCTAGTCGATCGTAGCTAGTCGATGCTAGCTAGCTGATCGTAGCTAGTCGATCGATGCCGTAGCTAGCTAGCTAGCTAGTCGATCGACATGCTAGCTAGCTAGTCGATGCTAGCTAGCTAGCTAGCTAGCTGATCGTAGCTAGTCGATGCTAGCTGATGCATCGTAGCTAGCTAGCTACTAGTCGATTATATCGTAGCTACACGCGCGATGCTAGCTATACGATCGACGGCTCGCTCGATACTGCTCGCGCTGCTCGCTATATCGATCGATCTACTACTAGCTACGGCTCATGCTAGCTAGCTAGCTAGCTGACTGACTGACTGATCGATCGTGCTCTGCTAGCTAGCTAGCTGACTAGCTAGCTGACTGACTGATCGATCTACTAGCTAGCTGACTGACTGACGCGCGCGGCATATATCTAGCACTGACTGCCCTGTCGCAGCGCTCACTCGATCGTCAGTCAGTCGATCGTCGACTGATCGACTGCTCTGCGCGCGGCGCAGAGGAGAGATCTCTCAGGCTACGATCGATCAGCTAGCTGATCGTACTGACTGATCGTAGCTAGCTGATCA"
+#create variables 
+nbTotal = nbC = nbT = nbA = nbG = 0
+#now a sequence to count them 
+for nucleotideo in dna:
+	if nucleotideo == 'A':
+		nbA += 1
+	elif nucleotideo == 'C':
+		nbC += 1
+	elif nucleotideo == 'G':
+		nbG += 1
+	elif nucleotideo == 'T':
+		nbT += 1
+	nbTotal += 1
+	print(nbTotal, nbC, nbG, nbT, nbA);
+  
+  #the print is opicional and actually not recommended inside the "for" because the DNA has a tone of letters, 
+  but a small example such as this one it's good to see if your code is couting right
+  
+ratioCG = ((nbC+nbG)/nbTotal)*100;
+ratioAT = ((nbA+nbT)/nbTotal)*100;
+print(ratioCG, ratioAT);
+ratioCG + ratioAT #just to confirm the sum will give you 100%
