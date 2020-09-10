@@ -1,0 +1,51 @@
+import matplotlib.pyplot as pyplot
+import pylab
+pylab.rcParams['figure.figsize'] = 10., 6.
+string = "abc"
+print("at index 0:", string[0]);
+at index 0: a
+string = "abcdefghijklmnopqrstuv"
+zoom = string[3:6]
+print(zoom)
+def
+string[9:200]
+'jklmnopqrstuv'
+
+def count_c_g(dna, begin, end):
+	c = g = 0
+	for nucleo in dna[begin:end]:
+		if nucleo == 'G':
+			g += 1
+		elif nucleo == 'C':
+			c += 1
+	return c, g
+
+def window_x_y(dna, window, overlap):
+	length = len(dna)
+	begin = 0
+	X = []
+	Y = []
+	while begin < length:
+		c, g = count_c_g(dna, begin, begin + window)
+		x = begin
+		if  c == 0 and g == 0:
+			y == 0.
+		else:
+			y = (g - c) / (g + c)
+		X.append(x)
+		Y.append(y)
+		begin += (window - overlap)
+		
+	return X,Y
+
+def sliding_window(dna, window, overlap):
+	X, Y = window_x_y(dna, window, overlap)
+	pyplot.plot(X, Y)
+	pyplot.plot([0, X[-1]], [0, 0], color = 'r', linestyle='dashed', linewidth=2)
+	pyplot.show()
+
+	
+test = 3*(5*'G'+7*'C')
+print(test)
+GGGGGCCCCCCCGGGGGCCCCCCCGGGGGCCCCCCC
+sliding_window(test, 10, 2)
