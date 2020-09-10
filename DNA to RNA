@@ -1,0 +1,27 @@
+# let's begin with exploring strings 
+st1 = "abc"
+st2 = "def"
+# we can add them up with +
+st3 = st1 + st2 
+
+# we can add to a previous string with the operation +=
+string = "ACTG"
+string += "TAGCT"
+print(string)
+
+# and now for the code itself that takes T and transform into U  
+
+def transcription(dna):
+	rna = ""
+	for nucleo in dna:
+		if nucleo == 'T':
+			rna += "U"
+		else:
+			rna += nucleo
+	return rna
+  
+  # write a dna, don't forget the T :P
+  dna = "GCTAGTCATCGATGCTAGTCGACTTCGTAGTCATGCTAGCTGATCGATCGTAAT" 
+  rna = transcription(dna)
+  print(rna)
+  
