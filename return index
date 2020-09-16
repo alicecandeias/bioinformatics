@@ -1,0 +1,23 @@
+#just a simple function that returns the index of the character you wanna find within a string
+
+>>> def index(seq,carac):
+  i = 0
+  lenght = len(seq)
+  position = 0
+  while i < lenght:
+    if seq[i] == carac:
+      return i
+    else:
+      position = 0
+      i += 1
+  return position
+
+>>> string = 'QWERTYUIOPLKJHGFDSAZXCVBNM'
+>>> c = 'V'
+>>> index(string, c)
+22
+
+#you can use a python battery included that easily do the same trick, I wrote the code as an exercise because it might come in handy when doing gene location
+>>> string.find('V')
+22
+
