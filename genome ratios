@@ -16,7 +16,7 @@ for nucleotideo in dna:
 	print(nbTotal, nbC, nbG, nbT, nbA);
   
   #the print is opicional and actually not recommended inside the "for" because the DNA has a tone of letters, 
-  but a small example such as this one it's good to see if your code is couting right
+  but for a small example such as this one is good to see if your code is counting right
   
 ratioCG = ((nbC+nbG)/nbTotal)*100;
 ratioAT = ((nbA+nbT)/nbTotal)*100;
