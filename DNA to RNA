@@ -29,5 +29,5 @@ def transcription(dna):
 
 def dna_to_rna(dna):
     mapping = {'G': 'C', 'C': 'G', 'T': 'A', 'A': 'U'}
-    dna = ''.join([mapping.get(ch) for ch in dna])
-    print(dna)
+    rna = ''.join([mapping.get(ch) for ch in dna])
+    print(rna)
